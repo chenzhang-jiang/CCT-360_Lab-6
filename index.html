@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Right Now</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="page">
+    <header class="header">
+        <p>WEATHER / LIVE</p>
+        <button id="refresh" type="button">↻ Refresh Data</button>
+    </header>
+
+    <main class="content">
+        <h1>Weather Right Now</h1>
+        <p class="subtitle">Current weather conditions</p>
+
+        <div class="cities">
+            <button class="city active" data-city="toronto">Toronto</button>
+            <button class="city" data-city="vancouver">Vancouver</button>
+            <button class="city" data-city="calgary">Calgary</button>
+            <button class="city" data-city="quebec">Québec City</button>
+            <button class="city" data-city="mississauga">Mississauga</button>
+        </div>
+
+        <section class="weather-card">
+            <div class="card-top">
+                <h2 id="location">Toronto</h2>
+                <p id="updated">Loading...</p>
+            </div>
+
+            <div class="main-weather">
+                <div>
+                    <p class="temperature"><span id="temperature">--</span>°C</p>
+                    <p id="condition">Loading weather...</p>
+                </div>
+                <div id="weather-icon" class="weather-icon" aria-hidden="true">🌤️</div>
+            </div>
+
+            <div class="details">
+                <div>
+                    <p>Feels Like</p>
+                    <strong id="feels">--°C</strong>
+                </div>
+                <div>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </div>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite">Connecting to weather data...</p>
+        </section>
+
+        <footer>Weather data: <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a></footer>
+    </main>
+</div>
+
+</body>
+</html>
